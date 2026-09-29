@@ -11,15 +11,15 @@ async function status(request, response) {
     values: [databaseName],
   });
 
-  response.status(200).json({ 
+  response.status(200).json({
     updated_at: updatedAt,
     dependencies: {
       database: {
         max_connections: parseInt(dbMaxConnections.rows[0].max_connections),
         opened_connections: dbOpenedConnections.rows[0].count,
-        version: dbVersion.rows[0].server_version
-      }
-    }
+        version: dbVersion.rows[0].server_version,
+      },
+    },
   });
 }
 
