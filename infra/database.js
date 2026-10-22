@@ -28,6 +28,7 @@ async function getNewClient() {
   return client;
 }
 
+
 export default {
   query,
   getNewClient,
